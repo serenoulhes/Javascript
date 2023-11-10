@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+    <style>
+       body {
+        text-align: center;
+       } 
+       button {
+        padding: 15px;
+        border-radius: 20px;
+        color: rgb(50, 48, 48);
+        background: none;
+        
+        }
+
+    </style>
+</head>
+<body>
+    
+    <img src="img/messicabeludo.jpg" id="imagem" width="500" alt="Messi Cabelo">
+    <br>
+    <button id= "botao" onclick="trocar()">Raspe o cabelo do messi</button>
+    <script>
+        let modo = 0;
+        function trocar(){
+            if(modo == 0){
+                document.getElementById("imagem").src = "img/messicareca.jpg";
+                document.getElementById("botao").innerHTML = "Devolva o cabelo do messi";
+                modo = 1;
+            } else{
+                document.getElementById("imagem").src = "img/messicabeludo.jpg";
+                modo = 0;
+            }
+        }
+    </script>
+</body>
+</html>
