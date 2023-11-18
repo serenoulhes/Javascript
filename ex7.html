@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 16</title>
+    <style>
+        body {      
+            padding: 0px;
+            margin: 0px;
+        }
+        header{
+            padding: 5px;
+            background-color: rgba(29, 182, 123, 0.795);
+            color: white;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+        }
+        ul li{
+            display:inline;
+        }
+        ul li a{
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        ul li a:hover{
+            background-color: rgba(40, 142, 236, 0.284);
+            color: white;
+        }
+        .active hover{
+            background-color: rgba(65, 129, 225, 0.281);
+        }
+        .active {
+        background-color: rgba(0, 255, 242, 0.452);
+        color: white;
+      }
+    
+    
+    
+        div{
+            background: rgba(26, 172, 152, 0.856);
+            color: white;
+            padding: 20px;
+            margin-left: 20%; 
+            margin-right: 20%;
+            border-radius: 10px; 
+            border:3px solid rgb(37, 167, 145);
+            box-shadow: 4px 4px rgba(35, 150, 69, 0.658);
+            
+        }
+            
+        
+        input[type="text"]{
+            width: 240px;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        input[type="text"]:focus{
+            outline: 3px solid royalblue;
+        }
+        button{
+            background-color: royalblue;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 4px;
+            width: 100px;
+            margin-top: 6px;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="ex1.html"> 1</a>
+        </li>
+        <li>
+            <a href="ex2.html"> 2</a>
+        </li>
+        <li>
+            <a href="ex3.html" >3</a>
+        </li>
+        <li>
+            <a href="ex4.html" >4</a>
+        </li>
+        <li>
+            <a href="ex5.html" >5</a>
+        </li>
+        <li>
+            <a href="ex6.html"> 6</a>
+        </li>
+        <li>
+            <a href="ex7.html"class="active"> 7</a>
+        </li>
+        <li>
+            <a href="ex8.html"> 8</a>
+        </li>
+    </ul>
+</header>
+    <h2>Exemplo 7</h2>
+    <h3>Verificação da idade</h3>
+    <div>
+        <label for="idade">Idade:</label><br>
+        <input name="idade" id="idade" type="text"><br>
+        <p id="msg" style="color: rgb(255, 255, 255);"></p>
+        <button type="submit" onclick="validar();">Enviar</button>
+    </div>
+    <script>
+        function validar(){
+            const id = document.getElementById("idade").value;
+            let texto;
+            if(isNaN(id) || id < 1 || id > 130)
+                texto = "Idade inválida!";
+            else
+                texto = "Idade OK!";
+            document.getElementById("msg").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

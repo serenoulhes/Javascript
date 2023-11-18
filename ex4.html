@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Exemplo 13</title>
     <style>
 
-    body {
+        /* HEADER */
+        body {
             padding: 0%;
             margin: 0%;
         }
@@ -41,6 +42,7 @@
     .active hover{
         background-color: rgba(65, 129, 225, 0.281);
     }
+
     .active {
         background-color: rgba(0, 255, 242, 0.452);
         color: white;
@@ -49,11 +51,11 @@
     
 </style>
 </head>
-<body style="background-image: url(img/homecapa.jpg); background-repeat: no-repeat; background-size: cover;">
+<body >
 <header>
     <ul>
         <li>
-            <a href="index.html"class="active">Home</a>
+            <a href="index.html">Home</a>
         </li>
         <li>
             <a href="ex1.html"> 1</a>
@@ -65,13 +67,13 @@
             <a href="ex3.html" >3</a>
         </li>
         <li>
-            <a href="ex4.html" >4</a>
+            <a href="ex4.html"class="active" >4</a>
         </li>
         <li>
             <a href="ex5.html" >5</a>
         </li>
         <li>
-            <a href="ex6.html"> 6</a>
+            <a href="ex6.html" > 6</a>
         </li>
         <li>
             <a href="ex7.html"> 7</a>
@@ -82,6 +84,21 @@
     </ul>
 </header>
 
-
+    <h2>Exemplo 4 <br> Mouse over/out</h2>
+    <div onmouseover="campeao(this);" onmouseout="campeao2(this);" style="background-color: rgba(255, 0, 0, 0.733); width: 300px; height: 200px; color: rgb(0, 0, 0); font-size: 70px; padding-top: 40px; padding-left: 20px;">
+       Flamengo
+    </div>
+    <script>
+        function campeao(obj){
+            obj.innerHTML = "aqui é framengo";
+            obj.style.fontSize = "60px";
+            obj.style.paddingTop = "20px";
+        }
+        function campeao2(obj){
+            obj.innerHTML = "mengoo"
+            obj.style.fontSize = "70px";
+            obj.style.paddingTop = "40px";
+        }
+    </script>
 </body>
 </html>

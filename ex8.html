@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 17</title>
+    <style>
+         body {
+            padding: 0%;
+            margin: 0%;
+        }
+    header{
+        padding: 5px;
+        background-color: rgba(29, 182, 123, 0.795);
+        color: white;
+    }
+    header>h1{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        text-align: center;
+    }
+    ul li{
+        display:inline;
+    }
+    ul li a{
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+    ul li a:hover{
+        background-color: rgba(40, 142, 236, 0.284);
+        color: white;
+    }
+    .active hover{
+        background-color: rgba(65, 129, 225, 0.281);
+    }
+    .active {
+        background-color: rgba(0, 255, 242, 0.452);
+        color: white;
+    }
+    
+        div{
+            background: rgba(26, 172, 152, 0.856);
+            color: white;
+            padding: 20px;
+            margin-left: 20%; 
+            margin-right: 20%;
+            border-radius: 10px; 
+            border:3px solid rgb(37, 167, 145);
+            box-shadow: 4px 4px rgba(35, 150, 69, 0.658);
+           
+        }
+        input[type="text"]{
+            width: 240px;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        input[type="text"]:focus{
+            outline: 3px solid royalblue;
+        }
+        button{
+            background-color: royalblue;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            padding: 4px;
+            width: 100px;
+            margin-top: 6px;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body><header>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="ex1.html"> 1</a>
+        </li>
+        <li>
+            <a href="ex2.html"> 2</a>
+        </li>
+        <li>
+            <a href="ex3.html" >3</a>
+        </li>
+        <li>
+            <a href="ex4.html" >4</a>
+        </li>
+        <li>
+            <a href="ex5.html" >5</a>
+        </li>
+        <li>
+            <a href="ex6.html"> 6</a>
+        </li>
+        <li>
+            <a href="ex7.html"> 7</a>
+        </li>
+        <li>
+            <a href="ex8.html"class="active"> 8</a>
+        </li>
+    </ul>
+</header>
+    <h2>Exemplo 8</h2>
+    <h3>Agenda</h3>
+    <div>
+        <label for="nome">Nome:</label><br>
+        <input name="nome" id="nome" type="text"><br>
+        <label for="celular">Celular:</label><br>
+        <input name="celular" id="celular" type="text"><br>
+        <button id="cadastrar" type="submit" onclick="cadastrar();">Cadastrar</button>
+    </div> <br><br>
+    <div id="dados">
+        <h2>Nome - Celular</h2>
+    </div>
+    <script>
+        function cadastrar(){
+            const n = document.getElementById('nome').value;
+            const c = document.getElementById('celular').value;
+            const d = document.getElementById('dados');
+            const h3 = document.createElement("h3");
+            h3.innerHTML = n + " - " + c;
+            d.appendChild (h3);
+            document.getElementById("nome").value = "";
+            document.getElementById("celular").value = "";
+        }
+    </script>
+</body>
+</html>
