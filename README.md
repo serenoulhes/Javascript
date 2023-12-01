@@ -7,9 +7,8 @@ link para acessar todos os exercicios:
 
 👇🏽👇🏽👇🏽👇🏽
 https://serenoulhes.github.io/Javascript/
-.
-.
-.
+
+- - - - - - - - - - - - - - - - - - - - - - - - -
 Sumário:
 
 1 - Cálculo de Média;
